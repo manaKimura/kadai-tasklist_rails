@@ -1,6 +1,9 @@
 <%= form_for(task) do |f| %>
-    <%= f.label :content, 'メッセージ'%>
+    <%= f.label :content, 'タスク'%>
     <%= f.text_field :content %>
+    
+    <%= f.label :status, 'ステータス'%>
+    <%= f.select :status, [['完了','完了'],['途中','途中'],['未着手','未着手'],['確認中','確認中'],['保留','保留']]%>
     
     <%= f.submit '投稿'%>
 <% end %>
