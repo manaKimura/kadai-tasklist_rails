@@ -8,7 +8,7 @@
             
             <div class="form-group">
                 <%= f.label :status, 'ステータス' %>
-                <%= f.select :status, [['完了','完了'],['途中','途中'],['未着手','未着手'],['確認中','確認中'],['保留','保留']], class: 'form-control'%>
+                <%= f.select :status, [['完了','完了'],['途中','途中'],['未着手','未着手'],['確認中','確認中'],['保留','保留']], {}, class: 'form-control'%>
             </div>
         
             <%= f.submit '投稿', class: 'btn btn-primary' %>
