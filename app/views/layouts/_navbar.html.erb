@@ -12,7 +12,12 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to  'タスク新規作成', new_task_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+          <% else %>
+          <% end %>
+          <li><%= link_to 'Sign up', signup_path %></li>
+          <li><%= link_to 'Log in', login_path %></li>
         </ul>
       </div>
     </div>
