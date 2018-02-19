@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     def show
         set_task
         if current_user != @task.user
-            redirect_to toppages_index_url
+            redirect_to root_url
         end
     end
     
